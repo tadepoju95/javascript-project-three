@@ -15,13 +15,18 @@ let guessNumber = () => {
     document.getElementById('btn').disabled = true;
     document.getElementById('result').innerHTML = 'computer chose : ' + randomNumber;
 
+  } else if(count === 3 && randomNumber === userInput) {
+    document.getElementById('userNumber').innerHTML = 'you are correct';
+    document.getElementById('btn').disabled = true;
+    document.getElementById('result').innerHTML = 'computer chose : ' + randomNumber;
+
   } else if(randomNumber < userInput) {
     document.getElementById('userNumber').innerHTML = 'guess too high';
 
   } else if(randomNumber > userInput) {
     document.getElementById('userNumber').innerHTML = 'guess too low';
 
-  } else if (randomNumber === userInput) {
+  } else if(randomNumber === userInput) {
     document.getElementById('userNumber').innerHTML = 'you are correct';
   }
 }
